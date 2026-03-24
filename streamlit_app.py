@@ -4,12 +4,11 @@ from fastai.vision.all import *
 st.title("Single Digit Prediction")
 st.text("Built by Joel Suwanto")
 
-def number_label(file_path):
-    file_parts = str(file_path).split("/")
+def extract_number(path):
+    path_parts_list = str(path).split("/")
+    return path_parts_list[8]
 
-    return file_parts[-2]
-
-single_digit_model = load_learner("single_digit_model (1).pkl")
+single_digit_model = load_learner("mnist_model_fastai_287.pkl")
 
 uploaded_file = st.file_uploader("Upload an image of a digit...", type=["jpg", "png", "jpeg"])
 
