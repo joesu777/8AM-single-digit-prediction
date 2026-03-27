@@ -9,7 +9,7 @@ def number_label(file_path):
 
     return file_parts[-2]
 
-single_digit_model = load_learner("single_digit_model (1).pkl")
+single_digit_model = load_learner("single_digit_model.pkl")
 
 uploaded_file = st.file_uploader("Upload an image of a digit...", type=["jpg", "png", "jpeg"])
 
