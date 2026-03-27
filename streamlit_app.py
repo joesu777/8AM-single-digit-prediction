@@ -27,5 +27,5 @@ if uploaded_file is not None:
 
 
 st.text("Built with Streamlit and FastAI")
-
-
+    
+    
